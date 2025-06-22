@@ -1,6 +1,7 @@
 import React from 'react';
 import herobg from '../Assets/background.png'; // background image
-import dashboardImg from '../Assets/dashboard.jpg'; // ✅ your dashboard image (replace with correct path and name)
+import dashboardImg from '../Assets/dashboard.jpg'; // 
+import { Link } from 'react-router-dom'; // Link for navigation
 
 const Hero = () => {
   return (
@@ -27,12 +28,16 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <button className="bg-[#4630dd] text-white px-6 py-3 rounded-lg text-sm font-medium shadow-md hover:bg-[#3d3289] transition">
-            Try GitGoblin
-          </button>
-          <button className="border bg-white border-[#7da6e4] text-[#000000] px-6 py-3 rounded-lg text-sm font-medium hover:bg-[#4630dd] hover:text-white transition">
-            Try GitGoblin AI
-          </button>
+          <Link to="/repositories">
+            <button className="bg-[#4630dd] text-white px-6 py-3 rounded-lg text-sm font-medium shadow-md hover:bg-[#3d3289] transition">
+              Try GitGoblin
+            </button>
+          </Link>
+          <Link to="/GitGoblinAi">
+            <button className="border bg-white border-[#7da6e4] text-[#000000] px-6 py-3 rounded-lg text-sm font-medium hover:bg-[#4630dd] hover:text-white transition">
+              Try GitGoblin AI
+            </button>
+          </Link>
         </div>
 
         {/* Dashboard Image */}

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import DevBotPanel from '../components/ChatBotComponents/DevBotPanel';
 import IssueCard from '../components/ChatBotComponents/IssueCard';
-import { FaGithub, FaMagic } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import backgroundImage from '../Assets/background.png';
+import HowGitGoblinAIWorks from '../components/HowGitGoblinAIWorks'; // 👈 Import here
 
 const GitGoblinAi = () => {
   const { owner, name } = useLocation().state || {};
@@ -62,7 +63,7 @@ const GitGoblinAi = () => {
     >
       <header className="text-center mb-8 max-w-3xl">
         <FaGithub className="text-4xl mx-auto mb-2" />
-        <h1 className="text-5xl md:text-6xl font-extrabold">Explore smarter.<br/>Contribute better.</h1>
+        <h1 className="text-5xl md:text-6xl font-extrabold">Explore smarter.<br />Contribute better.</h1>
         <p className="mt-3 text-lg md:text-xl text-white/80">
           Scans repo <strong>{owner}/{name}</strong> for open issues.
         </p>
@@ -99,9 +100,13 @@ const GitGoblinAi = () => {
         )}
       </section>
 
+      {/* DevBot Panel (Conditional) */}
       {selectedIssue && (
         <DevBotPanel issue={selectedIssue} onClose={() => setSelectedIssue(null)} />
       )}
+
+      {/* ⬇️ Added How It Works section for AI */}
+      <HowGitGoblinAIWorks />
     </div>
   );
 };
