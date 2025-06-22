@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaBug, FaCommentDots, FaRobot } from 'react-icons/fa';
-import aiPanelImage from '../Assets/ai-image.png'; // ⬅️ Replace with your actual image
+import aiPanelImage from '../Assets/ai-image.png'; 
 
 const HowGitGoblinAIWorks = () => {
   const steps = [

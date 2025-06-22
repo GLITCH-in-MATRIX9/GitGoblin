@@ -1,5 +1,5 @@
 import React from 'react';
-import bgImage from '../Assets/background.png'; // Replace with your actual path
+import bgImage from '../Assets/background.png'; 
 
 const GetStartedCTA = () => {
   return (

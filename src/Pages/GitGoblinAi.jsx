@@ -4,7 +4,7 @@ import DevBotPanel from '../components/ChatBotComponents/DevBotPanel';
 import IssueCard from '../components/ChatBotComponents/IssueCard';
 import { FaGithub } from 'react-icons/fa';
 import backgroundImage from '../Assets/background.png';
-import HowGitGoblinAIWorks from '../components/HowGitGoblinAIWorks'; // 👈 Import here
+import HowGitGoblinAIWorks from '../components/HowGitGoblinAIWorks'; 
 
 const GitGoblinAi = () => {
   const { owner, name } = useLocation().state || {};

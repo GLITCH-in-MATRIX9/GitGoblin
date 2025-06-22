@@ -7,7 +7,7 @@ import {
   FaGlobe,
 } from 'react-icons/fa';
 
-import bgImage from '../Assets/background.png'; // Replace with your background image path
+import bgImage from '../Assets/background.png'; 
 
 const Footer = () => {
   return (
@@ -38,26 +38,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Email subscribe */}
-          <div className="pt-6">
-            <p className="mb-2 text-sm">Subscribe for updates and tips</p>
-            <form
-              action="https://formspree.io/f/xpzvyekq" // Replace with your form endpoint
-              method="POST"
-              className="flex items-center bg-white rounded-md overflow-hidden w-full max-w-xs"
-            >
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Enter your email"
-                className="px-3 py-2 w-full text-black outline-none"
-              />
-              <button className="bg-[#7da6e4] px-4 py-2 hover:bg-blue-600 transition" type="submit">
-                Send
-              </button>
-            </form>
-          </div>
+          
         </div>
 
         {/* Middle columns - Links */}
@@ -85,7 +66,7 @@ const Footer = () => {
             <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
             <li>
               <a
-                href="https://github.com/yourusername/gitgoblin" // Replace with your actual GitHub repo
+                href="https://github.com/yourusername/gitgoblin" 
                 className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"

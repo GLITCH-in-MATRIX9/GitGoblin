@@ -23,7 +23,7 @@ Give a clear 2–3 step solution, avoid vague suggestions.`;
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "mistralai/mistral-7b-instruct", // or "openai/gpt-3.5-turbo"
+        model: "mistralai/mistral-7b-instruct", 
         messages: [
           {
             role: "system",

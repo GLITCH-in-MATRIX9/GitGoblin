@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaSearch, FaSlidersH, FaCodeBranch, FaRobot } from 'react-icons/fa';
-import aiImage from '../Assets/ai-image.png'; // ⬅️ Replace with your image
+import aiImage from '../Assets/ai-image.png'; 
 
 const HowItWorks = () => {
   const steps = [
