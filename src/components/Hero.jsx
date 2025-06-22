@@ -1,6 +1,6 @@
 import React from 'react';
 import herobg from '../Assets/background.png'; // background image
-import dashboardImg from '../Assets/dashboard.jpg'; // 
+import dashboardImg from '../Assets/dashboard.png'; // 
 import { Link } from 'react-router-dom'; // Link for navigation
 
 const Hero = () => {
