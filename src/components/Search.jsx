@@ -1,37 +1,52 @@
 import React, { useState } from 'react';
+import { FaSearch, FaTimes } from 'react-icons/fa';
 
 const Search = ({ onSearch }) => {
-    const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSearch(searchQuery);
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        onSearch(searchQuery); // Pass the search query to the parent
-    };
+  const clearSearch = () => setSearchQuery('');
 
-    return (
-        <form onSubmit={handleSubmit} className="flex justify-center items-center space-x-2">
-            <input
-                type="text"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                className="px-6 py-3 rounded-lg w-96 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
-                placeholder="Search repositories"
-            />
-            <button
-                type="submit"
-                className="px-6 py-3 rounded-lg bg-blue-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out relative overflow-hidden group"
-            >
-                <span className="relative z-10">Search</span>
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-400 via-blue-500 to-green-500 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:animate-gradientShift"></div>
-            </button>
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="flex justify-center items-center w-full py-10 bg-[#f1f4f9]"
+    >
+      <div className="flex items-center bg-white shadow-md rounded-lg px-4 py-3 w-full max-w-2xl">
+        {/* Icon */}
+        <FaSearch className="text-gray-400 mr-3" />
 
+        {/* Input */}
+        <input
+          type="text"
+          placeholder="Search repositories..."
+          className="flex-grow outline-none text-sm"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
 
-        </form>
-    );
+        {/* Clear Icon */}
+        {searchQuery && (
+          <FaTimes
+            className="text-gray-400 ml-3 cursor-pointer"
+            onClick={clearSearch}
+          />
+        )}
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="ml-4 bg-[#4630dd] hover:bg-blue-700 text-white font-medium text-sm px-5 py-2 rounded-sm shadow"
+        >
+          Find it now
+        </button>
+      </div>
+    </form>
+  );
 };
 
 export default Search;

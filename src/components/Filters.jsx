@@ -3,59 +3,77 @@ import React, { useState } from 'react';
 const Filters = ({ onFilter }) => {
   const [language, setLanguage] = useState('');
   const [sort, setSort] = useState('');
+  const [difficulty, setDifficulty] = useState('');
 
-  const handleApplyFilters = () => {
-    const filterQuery = [];
-    if (language) filterQuery.push(`language:${language}`);
-    if (sort) filterQuery.push(`sort:${sort}`);
-    onFilter(filterQuery.join(' ')); // Combine filters and pass to parent
+  const applyFilters = () => {
+    const filters = [];
+    if (language) filters.push(`language:${language}`);
+    if (sort) filters.push(`sort:${sort}`);
+    if (difficulty) filters.push(`difficulty:${difficulty}`);
+    onFilter(filters.join(' '));
+  };
+
+  const clearFilters = () => {
+    setLanguage('');
+    setSort('');
+    setDifficulty('');
+    onFilter('');
   };
 
   return (
-    <div className="bg-gray-800 p-4 rounded-lg shadow-lg mx-4 mt-6">
-      <h2 className="text-white text-xl font-semibold mb-4">Filters</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="filter-group">
-          <label htmlFor="language" className="block text-sm font-medium text-gray-400 mb-2">
-            Language
-          </label>
-          <input
-            type="text"
-            id="language"
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
-            placeholder="e.g., JavaScript"
-            className="w-full px-3 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring focus:ring-blue-500"
-          />
-        </div>
+    <div className="bg-[#f1f4f9] px-6 py-4 shadow-md rounded-md flex flex-wrap items-center gap-4 justify-between">
+      <div className="flex flex-col">
+        <label className="text-sm font-semibold text-gray-600 mb-1">Sort by:</label>
+        <select
+          className="px-4 py-2 rounded border border-gray-300 w-40"
+          value={sort}
+          onChange={(e) => setSort(e.target.value)}
+        >
+          <option value="">Relevance</option>
+          <option value="stars">Stars</option>
+          <option value="forks">Forks</option>
+          <option value="updated">Recently Updated</option>
+        </select>
+      </div>
 
-        <div className="filter-group">
-          <label htmlFor="sort" className="block text-sm font-medium text-gray-400 mb-2">
-            Sort By
-          </label>
-          <select
-            id="sort"
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring focus:ring-blue-500"
-          >
-            <option value="">Relevance</option>
-            <option value="stars">Stars</option>
-            <option value="forks">Forks</option>
-            <option value="updated">Recently Updated</option>
-          </select>
-        </div>
+      <div className="flex flex-col">
+        <label className="text-sm font-semibold text-gray-600 mb-1">Language:</label>
+        <input
+          type="text"
+          placeholder="e.g. JavaScript"
+          className="px-4 py-2 rounded border border-gray-300 w-40"
+          value={language}
+          onChange={(e) => setLanguage(e.target.value)}
+        />
+      </div>
 
-        <div className="filter-group flex items-end">
-          <button
-            onClick={handleApplyFilters}
-            className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-lg relative overflow-hidden group focus:outline-none focus:ring focus:ring-blue-500 transition-all duration-300 ease-in-out"
-          >
-            <span className="relative z-10">Apply Filters</span>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:animate-gradientShift"></div>
-          </button>
+      <div className="flex flex-col">
+        <label className="text-sm font-semibold text-gray-600 mb-1">Difficulty:</label>
+        <select
+          className="px-4 py-2 rounded border border-gray-300 w-40"
+          value={difficulty}
+          onChange={(e) => setDifficulty(e.target.value)}
+        >
+          <option value="">All</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
 
-        </div>
+      <div className="flex items-center gap-2">
+        <button
+          onClick={applyFilters}
+          className="bg-[#6554d3] text-white px-5 py-2 rounded hover:bg-blue-700"
+        >
+          Apply
+        </button>
+        <button
+          onClick={clearFilters}
+          className="text-sm text-gray-600 hover:underline"
+        >
+          Clear all
+        </button>
       </div>
     </div>
   );
