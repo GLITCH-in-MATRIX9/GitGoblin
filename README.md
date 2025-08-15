@@ -43,11 +43,9 @@ Try it out: **[git-goblin.vercel.app](https://git-goblin.vercel.app/)**
 - [Installation](#-installation)
 - [Usage](#-usage)
 - [Features](#-features)
-- [Configuration](#-configuration)
 - [Architecture](#-architecture)
-- [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
-- [License](#-license)
+
 
 ---
 
@@ -92,38 +90,13 @@ gitgoblin release --tag v1.2.0
 ---
 
 ## ✨ Features
-- **Scaffolding** – create consistent repo structures in seconds.
-- **Branch Cleanup** – remove merged or stale branches.
-- **Release Management** – auto-generate changelogs and tags.
-- **Analytics** – visualize repository activity.
-- **Integrations** – GitHub Actions, Conventional Commits, and more.
+- **AI-Powered Repo Analysis** – understand repository health, structure, and improvement opportunities.  
+- **Automated Issue Generation** – create detailed GitHub issues with fix suggestions.  
+- **Direct GitHub Integration** – fetch repositories and push issues instantly.  
+- **Clean Web Interface** – browse AI insights and manage generated reports visually.  
 
 ---
 
-## ⚙ Configuration
-
-GitGoblin can be configured via:
-1. `gitgoblin.config.json` (or `.yaml`)
-2. Environment variables
-3. CLI flags (highest priority)
-
-**Example:**
-```json
-{
-  "github": {
-    "token": "YOUR_GITHUB_TOKEN",
-    "owner": "YOUR_USERNAME",
-    "repo": "YOUR_REPO"
-  },
-  "features": {
-    "scaffold": true,
-    "cleanup": true,
-    "releases": true
-  }
-}
-```
-
----
 
 ## 🧩 Architecture
 
@@ -159,7 +132,7 @@ flowchart LR
 
 
 ## 🤝 Contributing
-We welcome contributions!
+I welcome contributions!
 
 1. Fork the repo
 2. Create your feature branch  
@@ -179,6 +152,7 @@ We welcome contributions!
 *(Follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.)*
 
 ---
+
 
 
 
