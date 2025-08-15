@@ -8,14 +8,17 @@
 
 ---
 
-## 📌 Overview
-**GitGoblin** is a powerful Git/GitHub companion that automates common repository tasks like:
-- 🚀 **Project scaffolding** for new repositories.
-- 🧹 **Cleanup & hygiene** (stale branches, unmerged PRs, unused assets).
-- 📝 **Release utilities** (changelogs, tags, version bumps).
-- 📊 **Analytics** and repository insights.
 
-With a clean interface and powerful CLI, GitGoblin keeps your repo tidy so you can focus on building.
+## 📌 Overview
+GitGoblin is an AI-powered GitHub companion that helps you **understand, diagnose, and improve your repositories**.  
+
+With GitGoblin, you can:  
+- 🤖 Fetch repositories directly from GitHub and analyze them with **AI-driven insights**.  
+- 🪄 Automatically **generate GitHub issues** with detailed descriptions and suggested fixes.  
+- 💡 Get recommendations on **how to resolve bugs, improve code quality, and enhance project structure**.  
+- 📌 Push generated issues directly to your GitHub repository or review them inside the app.  
+
+Whether you’re maintaining a personal project or managing dozens of repositories, GitGoblin’s **clean web UI and powerful AI engine** streamline the process so you can focus on building instead of manually triaging issues.
 
 ---
 
@@ -176,6 +179,7 @@ We welcome contributions!
 *(Follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.)*
 
 ---
+
 
 
 
