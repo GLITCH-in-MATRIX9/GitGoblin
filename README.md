@@ -127,38 +127,29 @@ GitGoblin can be configured via:
 
 ```mermaid
 flowchart LR
-    subgraph UserSide[User Side]
+    subgraph UserSide [User Side]
         U[User: Web UI / CLI]
     end
 
-    subgraph GitHubLayer[GitHub Layer]
+    subgraph GitHubLayer [GitHub Layer]
         GHAPI[GitHub API] --> REPO[Fetched Repository Data]
     end
 
-    subgraph AILayer[GitGoblin AI Layer]
-        AI[GitGoblin AI Engine] --> GEN[AI-Generated Issues & Fix Suggestions]
+    subgraph AILayer [GitGoblin AI Layer]
+        AI[AI Engine] --> GEN[Generated Issues & Fix Suggestions]
     end
 
-    subgraph Output[Output Layer]
+    subgraph Output [Output Layer]
         UI[Display in App UI]
         GHI[Post Issues to GitHub]
     end
 
-    %% Flow
     U -->|Select Repo & Ask AI| GHAPI
     REPO -->|Pass Data| AI
     AI --> GEN
     GEN --> UI
     GEN --> GHI
 
-    %% Styling
-    classDef main fill=#4CAF50,stroke=#333,stroke-width=1,color=#fff;
-    classDef ai fill=#673AB7,stroke=#333,stroke-width=1,color=#fff;
-    classDef output fill=#2196F3,stroke=#333,stroke-width=1,color=#fff;
-
-    class U main
-    class AI ai
-    class UI,GHI output
 
 ```
 
