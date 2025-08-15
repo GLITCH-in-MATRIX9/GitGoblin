@@ -3,7 +3,6 @@
 > Your mischievous Git assistant — automate, clean, and supercharge your repositories.
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)](#contributing)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://git-goblin.vercel.app/)
 
@@ -155,13 +154,6 @@ flowchart LR
 
 ---
 
-## 🗺 Roadmap
-- [ ] Multi-Git provider support (GitLab, Bitbucket)
-- [ ] Advanced analytics dashboard
-- [ ] Plugin marketplace
-- [ ] Team collaboration mode
-
----
 
 ## 🤝 Contributing
 We welcome contributions!
@@ -185,9 +177,6 @@ We welcome contributions!
 
 ---
 
-## 📜 License
-MIT License © 2025 [Your Name]  
-See [LICENSE](LICENSE) for details.
 
 
 
