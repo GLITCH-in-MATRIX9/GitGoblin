@@ -28,7 +28,8 @@ Try it out: **[git-goblin.vercel.app](https://git-goblin.vercel.app/)**
 ## 📷 Screenshots
 
 ### Dashboard
-![Dashboard](docs/assets/dashboard.png)
+![Dashboard](<img width="1896" height="964" alt="Screenshot 2025-08-15 205246" src="https://github.com/user-attachments/assets/ace08a26-debc-4e7d-bde1-fcc65d6eff7a" />
+)
 
 ### Repo Cleanup
 ![Cleanup](docs/assets/cleanup.png)
@@ -174,4 +175,5 @@ We welcome contributions!
 ## 📜 License
 MIT License © 2025 [Your Name]  
 See [LICENSE](LICENSE) for details.
+
 
