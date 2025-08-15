@@ -1,5 +1,5 @@
 
-#GitGoblin 2.0
+# GitGoblin 2.0
 > Your mischievous Git assistant — automate, clean, and supercharge your repositories.
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)
@@ -152,6 +152,7 @@ I welcome contributions!
 *(Follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.)*
 
 ---
+
 
 
 
