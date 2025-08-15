@@ -85,8 +85,6 @@ gitgoblin cleanup --stale-branches 90
 gitgoblin release --tag v1.2.0
 ```
 
-*(For the full CLI reference, see [`docs/cli.md`](docs/cli.md))*
-
 ---
 
 ## ✨ Features
@@ -152,6 +150,7 @@ I welcome contributions!
 *(Follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.)*
 
 ---
+
 
 
 
